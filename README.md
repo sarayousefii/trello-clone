@@ -53,12 +53,13 @@ A simple Trello clone built with React/Next.js in 1 day for practicing and evalu
 1. Clone the repository:
    ```bash
    git clone https://github.com/sarayousefii/trello-clone.git
-
 ```
+
 2.	Navigate into the project directory:
    ```bash
     cd trello-clone 
 ```
+
 3.	Install dependencies:
    ```bash
     npm install
@@ -73,6 +74,7 @@ A simple Trello clone built with React/Next.js in 1 day for practicing and evalu
    ```bash
     http://localhost:3000
 ```
+---
 
 ### Notes
 
@@ -85,6 +87,8 @@ A simple Trello clone built with React/Next.js in 1 day for practicing and evalu
 - Drag & drop for lists and cards is fully functional
 
 ```
+---
+
 ### Folder Structure
 trello-clone/
 ├── app/                 # Next.js App Router pages
@@ -96,6 +100,7 @@ trello-clone/
 ├── public/              # Static assets (icons, images)
 ├── package.json
 └── README.md
+
 
 ```
 ### License
