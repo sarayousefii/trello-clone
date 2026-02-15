@@ -1,0 +1,79 @@
+$list-header-bg: rgb(223, 225, 230); // رنگ شفاف برای هدر
+$menu-bg: #ffffff; // رنگ پس‌زمینه منو
+$menu-text-color: #333;
+$list-title-color: #333333;
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $list-header-bg; // ← این اضافه شد
+  padding: 6px 8px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+
+  .list-header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .drag-handle {
+      cursor: grab;
+      font-size: 18px;
+      user-select: none;
+    }
+
+    .list-title {
+      border: none;
+      background: transparent;
+      font-weight: bold;
+      font-size: 16px;
+      width: 150px;
+      color: $list-title-color;
+
+      &:focus {
+        outline: 2px solid $primary;
+      }
+    }
+  }
+
+  .menu-container {
+    position: relative;
+
+    .menu-btn {
+      background: transparent;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .menu-dropdown {
+      position: absolute;
+      right: 0;
+      top: 28px;
+      background: $menu-bg;
+      color: $menu-text-color;
+      border-radius: $border-radius;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      min-width: 120px;       // ← جلوگیری از شکسته شدن متن
+      white-space: nowrap;     // ← متن روی یک خط بماند
+      z-index: 10;
+
+      button {
+        border: none;
+        background: transparent;
+        padding: 8px 12px;
+        cursor: pointer;
+        text-align: left;
+
+        &:hover {
+          background-color: lighten($primary, 35%);
+        }
+      }
+    }
+  }
+}

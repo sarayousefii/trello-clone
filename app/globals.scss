@@ -1,0 +1,26 @@
+@import '../styles/main.scss';
+@import '../styles/list';
+@import '../styles/commentModal';
+.container {
+  background-color: rgb(46, 126, 175);
+  min-height: 100vh;
+  padding: 16px;
+  box-sizing: border-box;
+}
+.board-title-input {
+  font-size: 24px;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  color: #fff;
+  width: auto;
+  max-width: 100%;
+  padding: 10px;
+}
+
+.board-title-input:focus {
+  outline: 2px solid #333;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+}

@@ -1,0 +1,91 @@
+.list-container {
+  background-color: $list-bg;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  padding: $list-padding;
+  min-width: 250px;
+  max-width: 300px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .list-header-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .drag-handle {
+        cursor: grab;
+        font-size: 18px;
+      }
+
+      .list-title {
+        border: none;
+        background: transparent;
+        font-weight: bold;
+        font-size: 16px;
+        width: 150px;
+
+        &:focus {
+          outline: 2px solid $primary;
+        }
+      }
+    }
+
+    .menu-container {
+      position: relative;
+
+      .menu-btn {
+        background: transparent;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .menu-dropdown {
+        position: absolute;
+        right: 0;
+        top: 28px;
+        background: $card-bg;
+        border-radius: $border-radius;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        display: flex;
+        flex-direction: column;
+
+        button {
+          border: none;
+          background: transparent;
+          padding: 8px 12px;
+          cursor: pointer;
+          text-align: left;
+
+          &:hover {
+            background-color: lighten($primary, 35%);
+          }
+        }
+      }
+    }
+  }
+
+  .add-card-btn {
+    background-color: $button-bg;
+    color: $button-text;
+    border: none;
+    padding: 6px 10px;
+    border-radius: $border-radius;
+    cursor: pointer;
+    font-size: 14px;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
