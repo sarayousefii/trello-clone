@@ -24,12 +24,13 @@ export default function SortableList({
   setOpenMenuListId,
   ...props
 }: Props) {
-  const { attributes, listeners, setNodeRef, transform, transition } =
+  const { attributes, listeners, setNodeRef, transform, transition, isDragging } =
     useSortable({ id: list.id })
 
   const style: React.CSSProperties = {
     transform: CSS.Transform.toString(transform),
-    transition
+    transition: transition ?? "transform 300ms ease", // انیمیشن smooth لیست
+    zIndex: isDragging ? 10 : undefined
   }
 
   const isMenuOpen = openMenuListId === list.id
@@ -38,12 +39,10 @@ export default function SortableList({
     <div ref={setNodeRef} style={style} className="sortable-list">
       <div className="list-header">
         <div className="list-header-left">
-          {/* فقط این div برای drag handle */}
           <div {...attributes} {...listeners} className="drag-handle">
             ⋮⋮⋮
           </div>
 
-          {/* عنوان لیست بدون drag */}
           <input
             value={list.title}
             onChange={e => props.onUpdateTitle(list.id, e.target.value)}
@@ -61,12 +60,8 @@ export default function SortableList({
 
           {isMenuOpen && (
             <div className="menu-dropdown">
-              <button onClick={() => props.onDelete(list.id)}>
-                Delete List
-              </button>
-              <button onClick={() => props.clearCards(list.id)}>
-                Clear Cards
-              </button>
+              <button onClick={() => props.onDelete(list.id)}>Delete List</button>
+              <button onClick={() => props.clearCards(list.id)}>Clear Cards</button>
             </div>
           )}
         </div>

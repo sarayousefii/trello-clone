@@ -21,7 +21,7 @@ export default function Card({
   onDeleteCard,
   onAddComment
 }: Props) {
-  const { attributes, listeners, setNodeRef, transform, transition } =
+  const { attributes, listeners, setNodeRef, transform, transition, isDragging } =
     useSortable({ id: card.id })
 
   const style: React.CSSProperties = {
@@ -32,16 +32,18 @@ export default function Card({
   const [showComments, setShowComments] = useState(false)
 
   return (
-    <div ref={setNodeRef} style={style} className="card">
+    <div
+      ref={setNodeRef}
+      style={style}
+      className={`card ${isDragging ? "is-dragging" : ""}`}
+    >
       <div className="card-header">
         <div {...attributes} {...listeners} className="drag-handle">
-          ⋮⋮⋮
+          ⋮⋮⋮⋮⋮⋮
         </div>
         <input
           value={card.title}
-          onChange={e =>
-            onUpdateCard(listId, card.id, e.target.value)
-          }
+          onChange={e => onUpdateCard(listId, card.id, e.target.value)}
         />
       </div>
 
