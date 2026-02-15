@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Trello Clone
 
-## Getting Started
+A simple Trello clone built with React/Next.js in 1 day for practicing and evaluating frontend skills.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[Live Demo](#) <!-- optional: add your deployed link here -->
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Technologies Used
 
-## Learn More
+- **Next.js 15** + **TypeScript**  
+- **SCSS** for styling (with variables, mixins, nesting, and partials)  
+- **@dnd-kit** for drag & drop functionality  
+- **Custom Hooks** and **useState** for state management  
+- **localStorage** for data persistence  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Board Management
+- Editable board title
+- Pre-populated demo board
 
-## Deploy on Vercel
+### List Management
+- Create, edit, and delete lists
+- Horizontal drag & drop for lists
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Card Management
+- Create and edit cards
+- Vertical drag & drop inside lists
+- Drag & drop between lists
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Comments Modal
+- Add and view comments for each card in a modal
+
+### Responsive Design
+- Desktop layout fully supported
+- Basic mobile responsiveness
+
+### Data Persistence
+- All data managed on the client
+- Stored in localStorage
+
+---
+
+## Installation & Running Locally
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/<your-username>/trello-clone.git
+2.	Navigate into the project directory:
+   ```bash
+cd trello-clone
+
+
+
