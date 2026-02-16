@@ -1,22 +1,53 @@
 # Trello Clone
 
-A simple Trello clone built with React/Next.js in 1 day for practicing and evaluating frontend skills.
+A simple Trello clone built with **Next.js 15 + TypeScript** in 1 day to practice and evaluate frontend engineering skills.
 
 ---
 
 ## Demo
 
-[Live Demo](#) <!-- optional: add your deployed link here -->
+[Live Demo](#) <!-- Optional: Add your deployed link here -->
+
+<!-- Optional: Add a screenshot here -->
+<!-- ![Screenshot](./public/screenshot.png) -->
 
 ---
 
 ## Technologies Used
 
-- **Next.js 15** + **TypeScript**  
-- **SCSS** for styling (with variables, mixins, nesting, and partials)  
-- **@dnd-kit** for drag & drop functionality  
-- **Custom Hooks** and **useState** for state management  
-- **localStorage** for data persistence  
+- **Next.js 15 (App Router)**
+- **TypeScript**
+- **SCSS** (variables, mixins, nesting, partials)
+- **@dnd-kit** for drag & drop functionality
+- **Custom Hooks**
+- **useState** for state management
+- **localStorage** for client-side data persistence
+
+---
+
+## Architecture Overview
+
+- State is lifted to the **Board level** and passed down via props.
+- Drag & drop logic is implemented using **@dnd-kit sortable contexts and sensors**.
+- Data persistence is abstracted through a small **localStorage service layer**.
+- Type definitions are centralized inside the `/types` directory.
+- UI is component-driven and structured for reusability.
+
+---
+
+## Technical Decisions
+
+- **localStorage instead of backend**  
+  Chosen intentionally to keep the project focused on frontend logic and state handling.
+
+- **@dnd-kit instead of HTML5 drag API**  
+  Provides better control, accessibility, and flexibility for sortable lists and cards.
+
+- **SCSS instead of utility-first CSS**  
+  Used to demonstrate structured styling architecture, maintainability, and reusable design patterns.
+
+- **TypeScript strict typing**  
+  Used to ensure safer state updates and predictable drag-and-drop behavior.
 
 ---
 
@@ -48,60 +79,75 @@ A simple Trello clone built with React/Next.js in 1 day for practicing and evalu
 
 ---
 
-## Installation & Running Locally
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/sarayousefii/trello-clone.git
-```
-
-2.	Navigate into the project directory:
-   ```bash
-    cd trello-clone 
-```
-
-3.	Install dependencies:
-   ```bash
-    npm install
-```
-
-4.	Start the development server:
-   ```bash
-    npm run dev
-```
-
-5.	Open in browser:
-   ```bash
-    http://localhost:3000
-```
----
-
-### Notes
-
-- All data is stored on the client side (no backend required)
-
-- Focused on clean code, TypeScript type safety, and SCSS best practices
-
-- UI/UX is based on the demo reference provided
-
-- Drag & drop for lists and cards is fully functional
+## Folder Structure
 
 ```
----
-
-### Folder Structure
 trello-clone/
 ├── app/                 # Next.js App Router pages
 ├── components/          # Reusable UI components
 ├── hooks/               # Custom hooks for state management
-├── services/            # Initial data and utilities
+├── services/            # Data layer and utilities
 ├── styles/              # SCSS files (variables, mixins, partials)
-├── types/               # TypeScript types
-├── public/              # Static assets (icons, images)
+├── types/               # TypeScript type definitions
+├── public/              # Static assets
 ├── package.json
 └── README.md
+```
 
+---
+
+## Installation & Running Locally
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/sarayousefii/trello-clone.git
+```
+
+2. Navigate into the project directory:
+
+```bash
+cd trello-clone
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+4. Start the development server:
+
+```bash
+npm run dev
+```
+
+5. Open in browser:
 
 ```
-### License
-    This project is for learning and demonstration purposes.
+http://localhost:3000
+```
+
+---
+
+## Future Improvements
+
+- Add backend integration (API routes or external API)
+- Add authentication system
+- Add drag animation improvements
+- Add unit testing (Jest / React Testing Library)
+- Improve mobile UX interactions
+
+---
+
+## Notes
+
+- This project is focused on frontend architecture and state management.
+- Built within a 1-day time constraint.
+- Emphasis on clean code, reusability, and maintainable styling.
+
+---
+
+## License
+
+This project is for learning and demonstration purposes.
