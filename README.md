@@ -6,7 +6,7 @@ A simple Trello clone built with **Next.js 15 + TypeScript** in 1 day to practic
 
 ## Demo
 
-[Live Demo](trello-clone-ls5gal5gs-sars-projects-2bdc65e3.vercel.app) 
+[Live Demo](https://trello-clone-ls5gal5gs-sars-projects-2bdc65e3.vercel.app/) 
 
 ---
 
